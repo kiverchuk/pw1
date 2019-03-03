@@ -10,10 +10,15 @@
 	"cars":[
 		{
 			"brand" : "",
-		 	"model" : "",
+			"model" : "",
+			"anproductie" : "",
+			"capacitateamotor" : "",
+			"puteremotor" : "",
 			"tipmotor" : "",
 			"tipcutie" : "",
 			"tiptract" : "",
+			"tipcorp" : "",
+			"pretdefolt" : "",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
@@ -25,8 +30,11 @@
 			],
 			"colorsalon" : [
 				{"col" : "black" , "price" : "0"},
+				{"col" : "black + scaune red" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
+				{"col" : "White + scaune black" , "price" : "0"},
 				{"col" : "gray" , "price" : "0"},
+				{"col" : "gray + scaune brown" , "price" : "0"},				
 				{"col" : "pink" , "price" : "0"},
 				{"col" : "blue" , "price" : "0"},
 				{"col" : "orange" , "price" : "0"},
@@ -55,26 +63,26 @@
 			],
 			/* 0 - nus, 1 - sun, 2 - sunt nu pot fi scoase, 3 - neasamblambele*/
 			"comfort" : [
-				{"name" : "Conditioner", "proprety" : "0" , "price" : ""},
-				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : ""},
-				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : ""},
-				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : ""},
-				{"name" : "Piele interior", "proprety" : "0" , "price" : ""},
-				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : ""},
-				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : ""},
-				{"name" : "liuk", "proprety" : "0" , "price" : ""}
+				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
+				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
 			],
 			"securitate" : [
-				{"name" : "ABS", "proprety" : "0" , "price" : ""},
-				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : ""},
-				{"name" : "Sensor parcare", "proprety" : "0" , "price" : ""},
-				{"name" : "Airbag-uri", "proprety" : "0" , "price" : ""},
-				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : ""},
-				{"name" : "Faruri xenon", "proprety" : "0" , "price" : ""},
-				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : ""},
-				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : ""}	
+				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
+				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
+				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
 			]
-			
+
 		}
 	]
 }
