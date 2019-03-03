@@ -1,5 +1,9 @@
 var json = null;
 window.onload = function(){
+	let comand = document.querySelector('.comand');
+	let closecomand = document.querySelector('.btnclose');
+	let comandpanel = document.querySelector('.absolute');
+
 	(async () => {
 	  const response = await fetch('./js/data.json')
 	  json = await response.json()
@@ -9,13 +13,11 @@ window.onload = function(){
 		basicServicesSelect.onchange = function(){
 		console.log(basicServicesSelect.checked);
 	}
-	setTimeout(function() {
-		console.log(json)
-	}, 1000);
+	// setTimeout(function() {
+	// 	console.log(json)
+	// }, 1000);
 
-	let comand = document.querySelector('.comand');
-	let closecomand = document.querySelector('.btnclose');
-	let comandpanel = document.querySelector('.absolute');
+	
 	comand.addEventListener("click", function(){
 		comandpanel.style.display = 'block';
 	});
@@ -29,15 +31,3 @@ window.onload = function(){
 
 	
 
-
-
-// function httpGet(url) {
-//   	return new Promise(function(resolve, reject) {
-// 		    var xhr = new XMLHttpRequest();
-// 		    xhr.open('GET', url, true);
-// 		    xhr.onload = function() {      
-// 		        resolve(this.response);
-// 		    };        
-// 		    xhr.send();
-// 	    });
-// }
