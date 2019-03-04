@@ -7,6 +7,14 @@ window.onload = function(){
 	let coshopen = document.querySelector('.coshopen');
 	let closecosh = document.querySelector('.coshclose');
 	let coshpanel = document.querySelector('.coshpanel');
+	let coshnum = document.querySelector('.coshnum');
+
+	//cauta meniu
+	let brand = document.querySelector('#brand');
+	let model = document.querySelector('#model');
+	let tmotor = document.querySelector('#tmotor');
+	let tcutie = document.querySelector('#tcutie');
+	let tract = document.querySelector('#tract');
 
 	//comfort buttons
 	let comfort1 = document.querySelector('#comfort1');
@@ -42,14 +50,12 @@ window.onload = function(){
 	})()
 
 	
-		basicServicesSelect.onchange = function(){
+	basicServicesSelect.onchange = function(){
 		console.log(basicServicesSelect.checked);
 	}
 	// setTimeout(function() {
 	// 	console.log(json)
-	// }, 1000);
-
-	
+	// }, 1000);	
 	comandbtn.addEventListener("click", function(){
 		comandpanel.style.display = 'block';
 	});

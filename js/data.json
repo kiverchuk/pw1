@@ -61,7 +61,7 @@
 				{"col" : "2 automate" , "price" : "0"},
 				{"col" : "4 automate" , "price" : "0"}				
 			],
-			/* 0 - nus, 1 - sun, 2 - sunt nu pot fi scoase, 3 - neasamblambele*/
+			
 			"comfort" : [
 				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
 				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
@@ -84,5 +84,6 @@
 			]
 
 		}
-	]
+	],
+	"comment comfort/securitate proprety" : "0 - nus, 1 - sun, 2 - sunt nu pot fi scoase, 3 - neasamblambele"
 }
