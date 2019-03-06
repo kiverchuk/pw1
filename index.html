@@ -16,26 +16,26 @@
    </header>
    <aside>
     <nav>
-     <form class="was-validated">
+     <div class="">
       <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Brand: </label>
+          <label class="col-sm-2 col-form-label">Brand: </label>
           <div class="col-sm-10">
-             <div class="form-group">
-              <select class="custom-select" required>
-                <option value=""></option>
+             <div class="">
+              <select class="custom-select" id="brand">
+                <!-- <option value=""></option>
                 <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option> -->
               </select>
-              <div class="invalid-feedback">Alege brand</div>
+              <!-- <div class="invalid-feedback">Alege brand</div> -->
             </div>
           </div>
       </div>
       <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Model: </label>
+          <label class="col-sm-2 col-form-label">Model: </label>
           <div class="col-sm-10">
               <div class="form-group">
-              <select class="custom-select" required>
+              <select class="custom-select" required id="model">
                   <option value=""></option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -50,20 +50,20 @@
             <legend class="col-form-label col-sm-2 pt-0">Tip motor: </legend>
             <div class="col-sm-10">
                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosMotor" id="gridRadios1" value="option1" checked>
-                    <label class="form-check-label" for="gridRadios1">
+                    <input class="form-check-input" type="radio" name="gridRadiosMotor" value="Benzin" >
+                    <label class="form-check-label">
                     	Benzin
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosMotor" id="gridRadios2" value="option2">
-                    <label class="form-check-label" for="gridRadios2">
+                    <input class="form-check-input" type="radio" name="gridRadiosMotor" value="Disel">
+                    <label class="form-check-label">
                     	Disel
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosMotor" id="gridRadios3" value="option3">
-                    <label class="form-check-label" for="gridRadios3">
+                    <input class="form-check-input" type="radio" name="gridRadiosMotor" value="Electro">
+                    <label class="form-check-label">
                     	Electro
                   </label>
                 </div>
@@ -75,14 +75,14 @@
             <legend class="col-form-label col-sm-2 pt-0">Tip Cutie: </legend>
             <div class="col-sm-10">
                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosGearbox" id="gridRadios11" value="option11" checked>
-                    <label class="form-check-label" for="gridRadios11">
+                    <input class="form-check-input" type="radio" name="gridRadiosGearbox" value="Automat" >
+                    <label class="form-check-label">
                       Automat
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosGearbox" id="gridRadios12" value="option12">
-                    <label class="form-check-label" for="gridRadios12">
+                    <input class="form-check-input" type="radio" name="gridRadiosGearbox" value="Mecanica">
+                    <label class="form-check-label">
                       Mecanica
                   </label>
                 </div>
@@ -94,20 +94,20 @@
             <legend class="col-form-label col-sm-2 pt-0">Tract: </legend>
             <div class="col-sm-10">
                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" id="gridRadios21" value="option21" checked>
-                    <label class="form-check-label" for="gridRadios21">
+                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" value="Fata" >
+                    <label class="form-check-label">
                       Fata
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" id="gridRadios22" value="option22">
-                    <label class="form-check-label" for="gridRadios22">
+                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" value="Spate">
+                    <label class="form-check-label">
                       Spate
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" id="gridRadios23" value="option23">
-                    <label class="form-check-label" for="gridRadios23">
+                    <input class="form-check-input" type="radio" name="gridRadiosPrivod" value="4x4">
+                    <label class="form-check-label">
                       4x4
                   </label>
                 </div>
@@ -116,11 +116,11 @@
       </fieldset>
       <div class="form-group">
           <div class="">
-            <button class="btn btn-primary">Cauta</button>
+            <button class="btn btn-primary" id="cauta">Cauta</button>
             <!-- <button class="btn btn-info">Adauga cos</button> -->
           </div>
       </div>
-    </form>
+    </div>
     </nav>
    </aside>
    <article>

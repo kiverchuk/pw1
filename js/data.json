@@ -19,6 +19,7 @@
 			"tiptract" : "",
 			"tipcorp" : "",
 			"pretdefolt" : "",
+			"img" : "",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},

@@ -12,9 +12,10 @@ window.onload = function(){
 	//cauta meniu
 	let brand = document.querySelector('#brand');
 	let model = document.querySelector('#model');
-	let tmotor = document.querySelector('#tmotor');
-	let tcutie = document.querySelector('#tcutie');
-	let tract = document.querySelector('#tract');
+	let tmotor = 'input[name="gridRadiosMotor"]:checked';
+	let tcutie = 'input[name="gridRadiosGearbox"]:checked';
+	let tract = 'input[name="gridRadiosPrivod"]:checked';
+	let cauta = document.querySelector('#cauta');
 
 	//comfort buttons
 	let comfort1 = document.querySelector('#comfort1');
@@ -43,18 +44,21 @@ window.onload = function(){
 	let audion = document.querySelector('#audio');
 	let aer = document.querySelector('#aer');
 	let parbrize = document.querySelector('#parbrize');
+	let img = document.querySelector('#img');
 
 	(async () => {
 	  const response = await fetch('./js/data.json')
 	  json = await response.json()
+	  setbrand(json,brand);
+	  setmodel(json,model,brand.value)
+	  //console.log(json.models[brand.value])
 	})()
-
 	
-	basicServicesSelect.onchange = function(){
-		console.log(basicServicesSelect.checked);
-	}
+	// basicServicesSelect.onchange = function(){
+	// 	console.log(basicServicesSelect.checked);
+	// }
 	// setTimeout(function() {
-	// 	console.log(json)
+	// 	console.log(json.brands)
 	// }, 1000);	
 	comandbtn.addEventListener("click", function(){
 		comandpanel.style.display = 'block';
@@ -63,9 +67,39 @@ window.onload = function(){
 		comandpanel.style.display = 'none';
 	});
 
-
+	brand.onchange = function(){
+		setmodel(json,model,brand.value)
+	}
+	cauta.onclick = function(){
+		console.log(brand.value);
+		console.log(model.value);
+		if(document.querySelector(tmotor))
+			console.log(document.querySelector(tmotor).value)
+		if(document.querySelector(tcutie))
+			console.log(document.querySelector(tcutie).value)
+		if(document.querySelector(tract))
+			console.log(document.querySelector(tract).value)
+	}
+	
 
 }
 
-	
+function setbrand(json,obj){
+	obj.innerHTML = "";
+	for(let i = 0; i < json.brands.length; i++){
+		let option = document.createElement('option');
+		option.innerHTML = json.brands[i];
+		option.value = json.brands[i];
+		obj.appendChild(option);
+	}
+}
+function setmodel(json,obj,objval){
+	obj.innerHTML = "";
+	for(let i = 0; i < json.models[objval].length; i++){
+		let option = document.createElement('option');
+		option.innerHTML = json.models[objval][i];
+		option.value = json.models[objval][i];
+		obj.appendChild(option);
+	}
+}	
 
