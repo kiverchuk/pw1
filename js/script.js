@@ -8,6 +8,7 @@ window.onload = function(){
 	let closecosh = document.querySelector('.coshclose');
 	let coshpanel = document.querySelector('.coshpanel');
 	let coshnum = document.querySelector('.coshnum');
+
 	//new block
 	let news = document.querySelector('#news');
 
@@ -39,7 +40,7 @@ window.onload = function(){
 	let secure7 = document.querySelector('#secure7');
 	let secure8 = document.querySelector('#secure8');
 
-	//cras sets
+	//cars sets
 	let color = document.querySelector('#color');
 	let colorin = document.querySelector('#colorin');
 	let discuri = document.querySelector('#discuri');
@@ -118,17 +119,11 @@ function newslist(js,br,md,tm,tc,tt,obj){
 	obj.innerHTML = "";
 	for(let i = 0; i < js.cars.length; i++){		
 		let car = js.cars[i];
-		// console.log(car.brand + ":" + br)
-		// console.log(car.model + ":" + md)
-		// console.log(car.tipmotor + ":" + tm)
-		// console.log(car.tipcutie + ":" + tc)
-		// console.log(car.tiptract + ":" + tt)
 		if( car.brand == br &&
 			car.model == md &&
 			(car.tipmotor == tm || tm == "") &&
 			(car.tipcutie == tc || tc == "")&&
-			(car.tiptract == tt|| tt == "")){
-				//console.log("in if")
+			(car.tiptract == tt || tt == "")){
 				let carbloc = document.createElement('div');
 				carbloc.classList.add("new");
 
@@ -136,9 +131,11 @@ function newslist(js,br,md,tm,tc,tt,obj){
 				carimg.classList.add("carsimg");
 				carimg.src = car.img;
 				carbloc.appendChild(carimg);
+
 				let carh2 = document.createElement('h2');
 				carh2.innerHTML = br + " " + md;
 				carbloc.appendChild(carh2);
+
 				let carp = document.createElement('p');
 				carp.innerHTML = "Age: " + car.anproductie;
 				carbloc.appendChild(carp);
@@ -162,3 +159,6 @@ function newslist(js,br,md,tm,tc,tt,obj){
 	}
 }
 
+function separatecar(){
+
+}
