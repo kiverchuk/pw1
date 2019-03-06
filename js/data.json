@@ -1,16 +1,245 @@
 {
-	"brands":["BMW","Audi","Dacia","Ford","Mercedes-Benz"],
+	"brands":["Audi","Ford","Mercedes-Benz"],
 	"models":{
-		"BMW" : ["X6","X3","5 Series","7 Series"],
 		"Audi" : ["A5","A6","Q7","TT"],
-		"Dacia" : ["Logan","Duster","Lodgy","Sandero"],
 		"Ford": ["Mustang","Focus","Fiesta","Ranger"],
 		"Mercedes-Benz" : ["Vito","A class","E class","G class"]
 	},
 	"cars":[
 		{
-			"brand" : "",
-			"model" : "",
+			"brand" : "Audi",
+			"model" : "A5",
+			"anproductie" : "",
+			"capacitateamotor" : "",
+			"puteremotor" : "",
+			"tipmotor" : "",
+			"tipcutie" : "",
+			"tiptract" : "",
+			"tipcorp" : "",
+			"pretdefolt" : "",
+			"img" : "",
+			"color" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"colorsalon" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "black + scaune red" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "White + scaune black" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "gray + scaune brown" , "price" : "0"},				
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"disck" : [
+				{"col" : "14" , "price" : "0"},
+				{"col" : "15" , "price" : "0"},
+				{"col" : "16" , "price" : "0"},
+				{"col" : "17" , "price" : "0"},
+				{"col" : "18" , "price" : "0"},
+				{"col" : "19" , "price" : "0"}
+			],
+			"audion" : [
+				{"col" : "2 boxe" , "price" : "0"},
+				{"col" : "4 boxe" , "price" : "0"},
+				{"col" : "6 boxe" , "price" : "0"},
+				{"col" : "8 boxe" , "price" : "0"},
+				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"parbrize" : [
+				{"col" : "manuale" , "price" : "0"},
+				{"col" : "2 automate" , "price" : "0"},
+				{"col" : "4 automate" , "price" : "0"}				
+			],
+			
+			"comfort" : [
+				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
+				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+			],
+			"securitate" : [
+				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
+				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
+				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+			]
+
+		},
+		{
+			"brand" : "Audi",
+			"model" : "TT",
+			"anproductie" : "",
+			"capacitateamotor" : "",
+			"puteremotor" : "",
+			"tipmotor" : "",
+			"tipcutie" : "",
+			"tiptract" : "",
+			"tipcorp" : "",
+			"pretdefolt" : "",
+			"img" : "",
+			"color" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"colorsalon" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "black + scaune red" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "White + scaune black" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "gray + scaune brown" , "price" : "0"},				
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"disck" : [
+				{"col" : "14" , "price" : "0"},
+				{"col" : "15" , "price" : "0"},
+				{"col" : "16" , "price" : "0"},
+				{"col" : "17" , "price" : "0"},
+				{"col" : "18" , "price" : "0"},
+				{"col" : "19" , "price" : "0"}
+			],
+			"audion" : [
+				{"col" : "2 boxe" , "price" : "0"},
+				{"col" : "4 boxe" , "price" : "0"},
+				{"col" : "6 boxe" , "price" : "0"},
+				{"col" : "8 boxe" , "price" : "0"},
+				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"parbrize" : [
+				{"col" : "manuale" , "price" : "0"},
+				{"col" : "2 automate" , "price" : "0"},
+				{"col" : "4 automate" , "price" : "0"}				
+			],
+			
+			"comfort" : [
+				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
+				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+			],
+			"securitate" : [
+				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
+				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
+				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+			]
+
+		},
+		{
+			"brand" : "Audi",
+			"model" : "A5",
+			"anproductie" : "",
+			"capacitateamotor" : "",
+			"puteremotor" : "",
+			"tipmotor" : "",
+			"tipcutie" : "",
+			"tiptract" : "",
+			"tipcorp" : "",
+			"pretdefolt" : "",
+			"img" : "",
+			"color" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"colorsalon" : [
+				{"col" : "black" , "price" : "0"},
+				{"col" : "black + scaune red" , "price" : "0"},
+				{"col" : "White" , "price" : "0"},
+				{"col" : "White + scaune black" , "price" : "0"},
+				{"col" : "gray" , "price" : "0"},
+				{"col" : "gray + scaune brown" , "price" : "0"},				
+				{"col" : "pink" , "price" : "0"},
+				{"col" : "blue" , "price" : "0"},
+				{"col" : "orange" , "price" : "0"},
+				{"col" : "red" , "price" : "0"}
+			],
+			"disck" : [
+				{"col" : "14" , "price" : "0"},
+				{"col" : "15" , "price" : "0"},
+				{"col" : "16" , "price" : "0"},
+				{"col" : "17" , "price" : "0"},
+				{"col" : "18" , "price" : "0"},
+				{"col" : "19" , "price" : "0"}
+			],
+			"audion" : [
+				{"col" : "2 boxe" , "price" : "0"},
+				{"col" : "4 boxe" , "price" : "0"},
+				{"col" : "6 boxe" , "price" : "0"},
+				{"col" : "8 boxe" , "price" : "0"},
+				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"parbrize" : [
+				{"col" : "manuale" , "price" : "0"},
+				{"col" : "2 automate" , "price" : "0"},
+				{"col" : "4 automate" , "price" : "0"}				
+			],
+			
+			"comfort" : [
+				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
+				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
+				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+			],
+			"securitate" : [
+				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
+				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
+				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
+				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
+				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
+				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+			]
+
+		},
+		{
+			"brand" : "Audi",
+			"model" : "A5",
 			"anproductie" : "",
 			"capacitateamotor" : "",
 			"puteremotor" : "",

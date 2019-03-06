@@ -8,6 +8,8 @@ window.onload = function(){
 	let closecosh = document.querySelector('.coshclose');
 	let coshpanel = document.querySelector('.coshpanel');
 	let coshnum = document.querySelector('.coshnum');
+	//new block
+	let news = document.querySelector('#news');
 
 	//cauta meniu
 	let brand = document.querySelector('#brand');
@@ -52,6 +54,7 @@ window.onload = function(){
 	  setbrand(json,brand);
 	  setmodel(json,model,brand.value)
 	  //console.log(json.models[brand.value])
+	  
 	})()
 	
 	// basicServicesSelect.onchange = function(){
@@ -59,10 +62,14 @@ window.onload = function(){
 	// }
 	// setTimeout(function() {
 	// 	console.log(json.brands)
-	// }, 1000);	
-	comandbtn.addEventListener("click", function(){
-		comandpanel.style.display = 'block';
+	// }, 1000);
+	news.addEventListener("click", function(e){
+		if(e.target.classList.contains('comand'))
+			comandpanel.style.display = 'block';		
 	});
+	// comandbtn.addEventListener("click", function(){
+	// 	comandpanel.style.display = 'block';
+	// });
 	closecomand.addEventListener("click", function(){
 		comandpanel.style.display = 'none';
 	});
@@ -73,12 +80,16 @@ window.onload = function(){
 	cauta.onclick = function(){
 		console.log(brand.value);
 		console.log(model.value);
+		let tm = "";
+		let tc = "";
+		let tr = "";
 		if(document.querySelector(tmotor))
-			console.log(document.querySelector(tmotor).value)
+			tm = document.querySelector(tmotor).value
 		if(document.querySelector(tcutie))
-			console.log(document.querySelector(tcutie).value)
+			tc = document.querySelector(tcutie).value
 		if(document.querySelector(tract))
-			console.log(document.querySelector(tract).value)
+			tr = document.querySelector(tract).value
+			newslist(json, brand.value, model.value, tm, tc, tr, news);
 	}
 	
 
@@ -101,5 +112,53 @@ function setmodel(json,obj,objval){
 		option.value = json.models[objval][i];
 		obj.appendChild(option);
 	}
-}	
+}
+
+function newslist(js,br,md,tm,tc,tt,obj){
+	obj.innerHTML = "";
+	for(let i = 0; i < js.cars.length; i++){		
+		let car = js.cars[i];
+		// console.log(car.brand + ":" + br)
+		// console.log(car.model + ":" + md)
+		// console.log(car.tipmotor + ":" + tm)
+		// console.log(car.tipcutie + ":" + tc)
+		// console.log(car.tiptract + ":" + tt)
+		if( car.brand == br &&
+			car.model == md &&
+			(car.tipmotor == tm || tm == "") &&
+			(car.tipcutie == tc || tc == "")&&
+			(car.tiptract == tt|| tt == "")){
+				//console.log("in if")
+				let carbloc = document.createElement('div');
+				carbloc.classList.add("new");
+
+				let carimg = document.createElement('img');
+				carimg.classList.add("carsimg");
+				carimg.src = car.img;
+				carbloc.appendChild(carimg);
+				let carh2 = document.createElement('h2');
+				carh2.innerHTML = br + " " + md;
+				carbloc.appendChild(carh2);
+				let carp = document.createElement('p');
+				carp.innerHTML = "Age: " + car.anproductie;
+				carbloc.appendChild(carp);
+
+				carp = document.createElement('p');
+				carp.innerHTML = "Motor Capacity: " + car.capacitateamotor;
+				carbloc.appendChild(carp);
+
+				carp = document.createElement('p');
+				carp.innerHTML = "Price: " + car.pretdefolt;
+				carbloc.appendChild(carp);
+
+				let carbtn = document.createElement('button');
+				carbtn.classList.add("btn","btn-primary","comand");
+				carbtn.innerHTML = "Comand";
+				carbtn.id = i;
+				carbloc.appendChild(carbtn);
+
+				obj.appendChild(carbloc);
+			}
+	}
+}
 
