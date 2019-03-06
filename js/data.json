@@ -17,7 +17,7 @@
 			"tiptract" : "",
 			"tipcorp" : "",
 			"pretdefolt" : "",
-			"img" : "",
+			"img" : "img/car1.jpg",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
@@ -94,7 +94,7 @@
 			"tiptract" : "",
 			"tipcorp" : "",
 			"pretdefolt" : "",
-			"img" : "",
+			"img" : "img/car1.jpg",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
@@ -171,7 +171,7 @@
 			"tiptract" : "",
 			"tipcorp" : "",
 			"pretdefolt" : "",
-			"img" : "",
+			"img" : "img/car1.jpg",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
@@ -248,7 +248,7 @@
 			"tiptract" : "",
 			"tipcorp" : "",
 			"pretdefolt" : "",
-			"img" : "",
+			"img" : "img/car1.jpg",
 			"color" : [
 				{"col" : "black" , "price" : "0"},
 				{"col" : "White" , "price" : "0"},
