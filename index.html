@@ -5,7 +5,8 @@
 	<title>Chiverciuc Anton Proect Web I</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-	<script type="text/javascript" src="js/cars.js"></script>
+	<script type="text/javascript" src="js/Manager.js"></script>
+	<script type="text/javascript" src="js/Cars.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -249,230 +250,220 @@
 			   		
    				</td>
    				<td>
-					<table class="tablechanch">
-			   			<tr>
-			   				<td>
-	   							<div class="defoltoptions">Culoarea: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">black</option>
-										<option value="0">white</option>
-										<option value="100">grey $100</option>
-										<option value="250">purple $250</option>
-										<option value="1000">pink $1000</option>
-								</select>   		
-			   				</td>
-			   			</tr>
-			   			<tr>
-			   				<td>
-			   					<div class="defoltoptions">Culoarea salon: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">black</option>
-										<option value="0">white</option>
-										<option value="100">grey $100</option>
-										<option value="250">purple $250</option>
-										<option value="1000">pink $1000</option>
-								</select>   		
-			   				</td>
-			   			</tr>
-			   			<tr>
-			   				<td>
-			   					<div class="defoltoptions">Discuri: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">15</option>
-										<option value="10">16 $10</option>
-										<option value="100">17 $50</option>
-										<option value="250">18 $250</option>
-								</select>   		
-			   				</td>
-			   			</tr>
-			   			<tr>
-			   				<td>
-			   					<div class="defoltoptions">Sistem audio: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">2 boxe</option>
-										<option value="10">4 boxe $100</option>
-										<option value="100">6 boxe $500</option>
-								</select>   		
-			   				</td>
-			   			</tr>
-			   			<tr>
-			   				<td>
-			   					<div class="defoltoptions">sistem contitionare: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">fara</option>
-										<option value="10">conditioner $50</option>
-										<option value="100">climat control $50</option>
-										<option value="250">climat control 2 canale $250</option>
-								</select>   		
-			   				</td>
-		   				</tr>
-		   				<tr>
-			   				<td>
-			   					<div class="defoltoptions">Deschiderea parbrizelor: </div>
-			   				</td>
-			   				<td>
-			   					<select class="form-control">
-										<option value="0">Manuala</option>
-										<option value="10">Automat 2 $50</option>
-										<option value="100">Automat 4 $150</option>
-								</select>   		
-			   				</td>
-		   				</tr>
-		   			</table>
-   				</td>
-   			</tr>
-   		</table>
-   		
-   		
-   		
-   			 
-   		
+	<table class="tablechanch">
+			<tr>
+				<td>
+					<div class="defoltoptions">Culoarea: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">black</option>
+						<option value="0">white</option>
+						<option value="100">grey $100</option>
+						<option value="250">purple $250</option>
+						<option value="1000">pink $1000</option>
+				</select>   		
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="defoltoptions">Culoarea salon: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">black</option>
+						<option value="0">white</option>
+						<option value="100">grey $100</option>
+						<option value="250">purple $250</option>
+						<option value="1000">pink $1000</option>
+				</select>   		
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="defoltoptions">Discuri: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">15</option>
+						<option value="10">16 $10</option>
+						<option value="100">17 $50</option>
+						<option value="250">18 $250</option>
+				</select>   		
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="defoltoptions">Sistem audio: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">2 boxe</option>
+						<option value="10">4 boxe $100</option>
+						<option value="100">6 boxe $500</option>
+				</select>   		
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="defoltoptions">sistem contitionare: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">fara</option>
+						<option value="10">conditioner $50</option>
+						<option value="100">climat control $50</option>
+						<option value="250">climat control 2 canale $250</option>
+				</select>   		
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="defoltoptions">Deschiderea parbrizelor: </div>
+				</td>
+				<td>
+					<select class="form-control">
+						<option value="0">Manuala</option>
+						<option value="10">Automat 2 $50</option>
+						<option value="100">Automat 4 $150</option>
+				</select>   		
+				</td>
+			</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
 
-		<div class="row chouserwo">
-		    
-		    <div class="col-lg-6">
-			    <div class="card" >
-	                <div class="card-header">Comfort</div>            
-	                <ul class="list-group list-group-flush">                   
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>                  
-                	</ul>
-	            </div>
-	    </div>
-	    
-		    <div class="col-lg-6">
-			    <div class="card" >
-	                <div class="card-header">Securitatea</div>            
-	                <ul class="list-group list-group-flush">                   
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>
-	                    <li class="list-group-item">
-		                    <label class="switch">
-					        	<input type="checkbox" class="primary" id="lkjh">
-					        	<span class="slider"></span>
-					        </label>
-	                        Bootstrap Switch Primary
-	                    </li>                  
-                	</ul>
-	            </div>
-	        
-	    </div>
-
+	<div class="row chouserwo">	
+		<div class="col-lg-6">
+			<div class="card" >
+				<div class="card-header">Comfort</div>            
+				<ul class="list-group list-group-flush">                   
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>
+					<li class="list-group-item">
+						<label class="switch">
+							<input type="checkbox" class="primary" id="lkjh">
+							<span class="slider"></span>
+						</label>
+						Bootstrap Switch Primary
+					</li>                  
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="card" >
+				<div class="card-header">Securitatea</div>            
+					<ul class="list-group list-group-flush">                   
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>
+						<li class="list-group-item">
+							<label class="switch">
+								<input type="checkbox" class="primary" id="lkjh">
+								<span class="slider"></span>
+							</label>
+							Bootstrap Switch Primary
+						</li>                  
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h1>$ <span class="finalprice">100000</span></h1>			
+		<button class="btn btn-primary incosh">Adauga in cosh</button>
 	</div>
-			<h1>$ <span class="finalprice">100000</span></h1>
-			
-		  	<button class="btn btn-primary incosh">Adauga in cosh</button>
-</div>
 </body>
 </html>

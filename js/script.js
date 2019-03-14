@@ -177,11 +177,13 @@ window.onload = function(){
 	(async () => {
 		const response = await fetch('./js/data.json')
 		var json = await response.json();
-		var obj_proect = new cars(json);
-		//console.log(obj_proect);
-		//setbrand(json,brand);
-		//setmodel(json,model,brand.value)
-		//console.log(json.models[brand.value])
+		var car_object = new Cars(json);
+		var manager_object = new Manager();
+		manager_object.SetOllDomConections(manager_object.me);
+		manager_object.SetOllDomListeners(manager_object.me,car_object.json);
+		manager_object.SetSelectBrand(manager_object.me,car_object.json.brands);
+		manager_object.SetSelectModel(manager_object.me,car_object.json.models);
+
 		
 	})()
 }
