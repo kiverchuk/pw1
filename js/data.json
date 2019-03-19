@@ -9,77 +9,83 @@
 		{
 			"brand" : "Audi",
 			"model" : "A5",
-			"anproductie" : "",
-			"capacitateamotor" : "",
-			"puteremotor" : "",
-			"tipmotor" : "",
-			"tipcutie" : "",
-			"tiptract" : "",
-			"tipcorp" : "",
-			"pretdefolt" : "",
+			"anproductie" : "2018",
+			"capacitateamotor" : "2300",
+			"puteremotor" : "184",
+			"tipmotor" : "Benzin",
+			"tipcutie" : "Automat",
+			"tiptract" : "Fata",
+			"tipcorp" : "Cupe",
+			"pretdefolt" : "23000",
 			"img" : "img/car1.jpg",
 			"color" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"colorsalon" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "black + scaune red" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "White + scaune black" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "gray + scaune brown" , "price" : "0"},				
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "black + scaune red" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "White + scaune black" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "gray + scaune brown" , "price" : "0"},				
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"disck" : [
-				{"col" : "14" , "price" : "0"},
-				{"col" : "15" , "price" : "0"},
-				{"col" : "16" , "price" : "0"},
-				{"col" : "17" , "price" : "0"},
-				{"col" : "18" , "price" : "0"},
-				{"col" : "19" , "price" : "0"}
+				{"text" : "14" , "price" : "0"},
+				{"text" : "15" , "price" : "0"},
+				{"text" : "16" , "price" : "0"},
+				{"text" : "17" , "price" : "0"},
+				{"text" : "18" , "price" : "0"},
+				{"text" : "19" , "price" : "0"}
 			],
-			"audion" : [
-				{"col" : "2 boxe" , "price" : "0"},
-				{"col" : "4 boxe" , "price" : "0"},
-				{"col" : "6 boxe" , "price" : "0"},
-				{"col" : "8 boxe" , "price" : "0"},
-				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
-				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			"audio" : [
+				{"text" : "2 boxe" , "price" : "0"},
+				{"text" : "4 boxe" , "price" : "0"},
+				{"text" : "6 boxe" , "price" : "0"},
+				{"text" : "8 boxe" , "price" : "0"},
+				{"text" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"text" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"aer":[
+				{"text" : "Fara coditioner", "price" : "0"},
+				{"text" : "Conditioner", "price" : "100"},
+				{"text" : "Climat control", "price" : "200"},
+				{"text" : "Climat control pe 2 canale", "price" : "250"}
 			],
 			"parbrize" : [
-				{"col" : "manuale" , "price" : "0"},
-				{"col" : "2 automate" , "price" : "0"},
-				{"col" : "4 automate" , "price" : "0"}				
+				{"text" : "manuale" , "price" : "0"},
+				{"text" : "2 automate" , "price" : "0"},
+				{"text" : "4 automate" , "price" : "0"}				
 			],
 			
 			"comfort" : [
-				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
-				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+				{"proprety" : "0" , "price" : "200"},
+				{"proprety" : "1" , "price" : "150"},
+				{"proprety" : "2" , "price" : "100"},
+				{"proprety" : "0" , "price" : "150"},
+				{"proprety" : "1" , "price" : "1500"},
+				{"proprety" : "2" , "price" : "1000"},
+				{"proprety" : "0" , "price" : "700"},
+				{"proprety" : "0" , "price" : "880"}
 			],
 			"securitate" : [
-				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
-				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
-				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+				{"proprety" : "0" , "price" : "245"},
+				{"proprety" : "0" , "price" : "180"},
+				{"proprety" : "0" , "price" : "120"},
+				{"proprety" : "0" , "price" : "600"},
+				{"proprety" : "0" , "price" : "400"},
+				{"proprety" : "0" , "price" : "200"},
+				{"proprety" : "0" , "price" : "1200"},
+				{"proprety" : "0" , "price" : "400"}	
 			]
 
 		},
@@ -96,67 +102,73 @@
 			"pretdefolt" : "",
 			"img" : "img/car1.jpg",
 			"color" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"colorsalon" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "black + scaune red" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "White + scaune black" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "gray + scaune brown" , "price" : "0"},				
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "black + scaune red" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "White + scaune black" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "gray + scaune brown" , "price" : "0"},				
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"disck" : [
-				{"col" : "14" , "price" : "0"},
-				{"col" : "15" , "price" : "0"},
-				{"col" : "16" , "price" : "0"},
-				{"col" : "17" , "price" : "0"},
-				{"col" : "18" , "price" : "0"},
-				{"col" : "19" , "price" : "0"}
+				{"text" : "14" , "price" : "0"},
+				{"text" : "15" , "price" : "0"},
+				{"text" : "16" , "price" : "0"},
+				{"text" : "17" , "price" : "0"},
+				{"text" : "18" , "price" : "0"},
+				{"text" : "19" , "price" : "0"}
 			],
-			"audion" : [
-				{"col" : "2 boxe" , "price" : "0"},
-				{"col" : "4 boxe" , "price" : "0"},
-				{"col" : "6 boxe" , "price" : "0"},
-				{"col" : "8 boxe" , "price" : "0"},
-				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
-				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			"audio" : [
+				{"text" : "2 boxe" , "price" : "0"},
+				{"text" : "4 boxe" , "price" : "0"},
+				{"text" : "6 boxe" , "price" : "0"},
+				{"text" : "8 boxe" , "price" : "0"},
+				{"text" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"text" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"aer":[
+				{"text" : "Fara coditioner", "price" : "0"},
+				{"text" : "Conditioner", "price" : "100"},
+				{"text" : "Climat control", "price" : "200"},
+				{"text" : "Climat control pe 2 canale", "price" : "250"}
 			],
 			"parbrize" : [
-				{"col" : "manuale" , "price" : "0"},
-				{"col" : "2 automate" , "price" : "0"},
-				{"col" : "4 automate" , "price" : "0"}				
+				{"text" : "manuale" , "price" : "0"},
+				{"text" : "2 automate" , "price" : "0"},
+				{"text" : "4 automate" , "price" : "0"}				
 			],
 			
 			"comfort" : [
-				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
-				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}
 			],
 			"securitate" : [
-				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
-				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
-				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}	
 			]
 
 		},
@@ -168,72 +180,78 @@
 			"puteremotor" : "",
 			"tipmotor" : "Benzin",
 			"tipcutie" : "",
-			"tiptract" : "",
+			"tiptract" : "Fata",
 			"tipcorp" : "",
 			"pretdefolt" : "",
 			"img" : "img/car1.jpg",
 			"color" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"colorsalon" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "black + scaune red" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "White + scaune black" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "gray + scaune brown" , "price" : "0"},				
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "black + scaune red" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "White + scaune black" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "gray + scaune brown" , "price" : "0"},				
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"disck" : [
-				{"col" : "14" , "price" : "0"},
-				{"col" : "15" , "price" : "0"},
-				{"col" : "16" , "price" : "0"},
-				{"col" : "17" , "price" : "0"},
-				{"col" : "18" , "price" : "0"},
-				{"col" : "19" , "price" : "0"}
+				{"text" : "14" , "price" : "0"},
+				{"text" : "15" , "price" : "0"},
+				{"text" : "16" , "price" : "0"},
+				{"text" : "17" , "price" : "0"},
+				{"text" : "18" , "price" : "0"},
+				{"text" : "19" , "price" : "0"}
 			],
-			"audion" : [
-				{"col" : "2 boxe" , "price" : "0"},
-				{"col" : "4 boxe" , "price" : "0"},
-				{"col" : "6 boxe" , "price" : "0"},
-				{"col" : "8 boxe" , "price" : "0"},
-				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
-				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			"audio" : [
+				{"text" : "2 boxe" , "price" : "0"},
+				{"text" : "4 boxe" , "price" : "0"},
+				{"text" : "6 boxe" , "price" : "0"},
+				{"text" : "8 boxe" , "price" : "0"},
+				{"text" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"text" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"aer":[
+				{"text" : "Fara coditioner", "price" : "0"},
+				{"text" : "Conditioner", "price" : "100"},
+				{"text" : "Climat control", "price" : "200"},
+				{"text" : "Climat control pe 2 canale", "price" : "250"}
 			],
 			"parbrize" : [
-				{"col" : "manuale" , "price" : "0"},
-				{"col" : "2 automate" , "price" : "0"},
-				{"col" : "4 automate" , "price" : "0"}				
+				{"text" : "manuale" , "price" : "0"},
+				{"text" : "2 automate" , "price" : "0"},
+				{"text" : "4 automate" , "price" : "0"}				
 			],
 			
 			"comfort" : [
-				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
-				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}
 			],
 			"securitate" : [
-				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
-				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
-				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}	
 			]
 
 		},
@@ -250,70 +268,76 @@
 			"pretdefolt" : "",
 			"img" : "img/car1.jpg",
 			"color" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"colorsalon" : [
-				{"col" : "black" , "price" : "0"},
-				{"col" : "black + scaune red" , "price" : "0"},
-				{"col" : "White" , "price" : "0"},
-				{"col" : "White + scaune black" , "price" : "0"},
-				{"col" : "gray" , "price" : "0"},
-				{"col" : "gray + scaune brown" , "price" : "0"},				
-				{"col" : "pink" , "price" : "0"},
-				{"col" : "blue" , "price" : "0"},
-				{"col" : "orange" , "price" : "0"},
-				{"col" : "red" , "price" : "0"}
+				{"text" : "black" , "price" : "0"},
+				{"text" : "black + scaune red" , "price" : "0"},
+				{"text" : "White" , "price" : "0"},
+				{"text" : "White + scaune black" , "price" : "0"},
+				{"text" : "gray" , "price" : "0"},
+				{"text" : "gray + scaune brown" , "price" : "0"},				
+				{"text" : "pink" , "price" : "0"},
+				{"text" : "blue" , "price" : "0"},
+				{"text" : "orange" , "price" : "0"},
+				{"text" : "red" , "price" : "0"}
 			],
 			"disck" : [
-				{"col" : "14" , "price" : "0"},
-				{"col" : "15" , "price" : "0"},
-				{"col" : "16" , "price" : "0"},
-				{"col" : "17" , "price" : "0"},
-				{"col" : "18" , "price" : "0"},
-				{"col" : "19" , "price" : "0"}
+				{"text" : "14" , "price" : "0"},
+				{"text" : "15" , "price" : "0"},
+				{"text" : "16" , "price" : "0"},
+				{"text" : "17" , "price" : "0"},
+				{"text" : "18" , "price" : "0"},
+				{"text" : "19" , "price" : "0"}
 			],
-			"audion" : [
-				{"col" : "2 boxe" , "price" : "0"},
-				{"col" : "4 boxe" , "price" : "0"},
-				{"col" : "6 boxe" , "price" : "0"},
-				{"col" : "8 boxe" , "price" : "0"},
-				{"col" : "6 boxe + 1 subwoofer" , "price" : "0"},
-				{"col" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			"audio" : [
+				{"text" : "2 boxe" , "price" : "0"},
+				{"text" : "4 boxe" , "price" : "0"},
+				{"text" : "6 boxe" , "price" : "0"},
+				{"text" : "8 boxe" , "price" : "0"},
+				{"text" : "6 boxe + 1 subwoofer" , "price" : "0"},
+				{"text" : "8 boxe + 1 subwoofer" , "price" : "0"}
+			],
+			"aer":[
+				{"text" : "Fara coditioner", "price" : "0"},
+				{"text" : "Conditioner", "price" : "100"},
+				{"text" : "Climat control", "price" : "200"},
+				{"text" : "Climat control pe 2 canale", "price" : "250"}
 			],
 			"parbrize" : [
-				{"col" : "manuale" , "price" : "0"},
-				{"col" : "2 automate" , "price" : "0"},
-				{"col" : "4 automate" , "price" : "0"}				
+				{"text" : "manuale" , "price" : "0"},
+				{"text" : "2 automate" , "price" : "0"},
+				{"text" : "4 automate" , "price" : "0"}				
 			],
 			
 			"comfort" : [
-				{"name" : "Conditioner", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Oglinzi laterale cu incalzire", "proprety" : "0" , "price" : "0"},
-				{"name" : "Scaune cu electro regulare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Piele interior", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistem de navigare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu vitezii de cruiza", "proprety" : "0" , "price" : "0"},
-				{"name" : "liuk", "proprety" : "0" , "price" : "0"}
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}
 			],
 			"securitate" : [
-				{"name" : "ABS", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor ploaie", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sensor parcare", "proprety" : "0" , "price" : "0"},
-				{"name" : "Airbag-uri", "proprety" : "0" , "price" : "0"},
-				{"name" : "Anvelope de iarna", "proprety" : "0" , "price" : "0"},
-				{"name" : "Faruri xenon", "proprety" : "0" , "price" : "0"},
-				{"name" : "Controlu tractiunii", "proprety" : "0" , "price" : "0"},
-				{"name" : "Sistemu de stabilizare", "proprety" : "0" , "price" : "0"}	
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"},
+				{"proprety" : "0" , "price" : "0"}	
 			]
 
 		}
 	],
-	"comment comfort/securitate proprety" : "0 - nus, 1 - sun, 2 - sunt nu pot fi scoase, 3 - neasamblambele"
+	"comment comfort/securitate proprety" : "0 - nus, 1 - sun,  3 - neasamblambele"
 }

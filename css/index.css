@@ -13,7 +13,12 @@
 	margin: 2px;
 }
 
-
+.disabled + .slider{
+  cursor: default;
+}
+.disabled:not(:checked) + .slider{
+  opacity: 0.3;
+} 
 /*.defchoose{
 	margin: 7px;
 }*/

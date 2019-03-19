@@ -1,5 +1,5 @@
 class Manager{
-    constructor(){
+    constructor(carObject){
         this.comandButtons = [];
         this.panels = [];
         this.searchMeniu = [];
@@ -8,30 +8,38 @@ class Manager{
         this.carSetsButtons = [];
         this.staticCarInfo = [];
         this.me = this;
+        this.carObject = carObject;
     }
 
-    SetOllDomConections(me){
-        me.Set_comandButtons(me);
-        me.Set_panels(me);
-        me.Set_searchMeniu(me);
-        me.Set_comfortButtons(me);
-        me.Set_securityButtons(me);
-        me.Set_staticCarInfo(me);
+    setOllDomConections(me){
+        me.set_comandButtons(me);
+        me.set_panels(me);
+        me.set_searchMeniu(me);
+        me.set_comfortButtons(me);
+        me.set_securityButtons(me);
+        me.set_staticCarInfo(me);
+        me.set_carSetsButtons(me);
     }
-    SetOllDomListeners(me,json){
-        me.Set_comandButtonListener(me);
-        me.Set_closeComandButtonListener(me);
-        me.Set_brandListener(me,json.models,me.searchMeniu['brand'],me.searchMeniu['model'])
-        me.Set_cautaButtonListener(me,json);
+    setOllDomListeners(me, json, carObject){
+        me.set_comandButtonListener(me, carObject);
+        me.set_closeComandButtonListener(me);
+        me.set_brandListener(me, json.models, me.searchMeniu['brand'], me.searchMeniu['model'])
+        me.set_cautaButtonListener(me, json);
     }
-    SetSelectBrand(me,jsonarr){
-        me.Set_domSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
+    setSelectBrand(me,jsonarr){
+        me.set_domSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
     }
-    SetSelectModel(me,jsonarr){
-        me.Set_domSelectBrandsorModels(me.searchMeniu['model'],jsonarr[me.searchMeniu['brand'].value]);
+    setSelectModel(me,jsonarr){
+        me.set_domSelectBrandsorModels(me.searchMeniu['model'],jsonarr[me.searchMeniu['brand'].value]);
     }
+    // setCarPanelInfo(me,car){
+    //     me.setCarStaticInfo(me,car);
+    //     me.setCarVariableInfo(me,car);
+    //     me.setCarComfort(me,car);
+    //     me.setCarSecurity(me,car);
+    // }
 
-    Set_comandButtons(me){
+    set_comandButtons(me){
         me.comandButtons['comand'] = document.querySelector('.comand');
         me.comandButtons['btnclose'] = document.querySelector('.btnclose');
         me.comandButtons['absolute'] = document.querySelector('.absolute');
@@ -39,12 +47,12 @@ class Manager{
         me.comandButtons['coshclose'] = document.querySelector('.coshclose');
         me.comandButtons['coshnum'] = document.querySelector('.coshnum');
     }
-    Set_panels(me){
+    set_panels(me){
         me.panels["news"] = document.querySelector('#news');
         me.panels["panel"] = document.querySelector('.absolute');
         // me.panels["coshpanel"] = document.querySelector('.coshpanel');
     }
-    Set_searchMeniu(me){
+    set_searchMeniu(me){
         me.searchMeniu['brand'] = document.querySelector('#brand');
         me.searchMeniu['model']  = document.querySelector('#model');
         me.searchMeniu['typeMotor']  = 'input[name="gridRadiosMotor"]:checked';
@@ -52,24 +60,23 @@ class Manager{
         me.searchMeniu['wheelDrive']  = 'input[name="gridRadiosPrivod"]:checked';
         me.searchMeniu['cauta']  = document.querySelector('#cauta');
     }
-    Set_comfortButtons(me){
+    set_comfortButtons(me){
         for(let i = 0; i < 8; i++)
             me.comfortButtons[i] = document.querySelector('#comfort'+(i+1));
     }
-    Set_securityButtons(me){
+    set_securityButtons(me){
         for(let i = 0; i < 8; i++)
             me.securityButtons[i] = document.querySelector('#secure'+(i+1));
     }
-    Set_carSetsButtons(me){
+    set_carSetsButtons(me){
         me.carSetsButtons['color'] = document.querySelector('#color');
         me.carSetsButtons['colorin'] = document.querySelector('#colorin');
         me.carSetsButtons['discuri'] = document.querySelector('#discuri');
         me.carSetsButtons['audio'] = document.querySelector('#audio');
         me.carSetsButtons['aer'] = document.querySelector('#aer');
         me.carSetsButtons['parbrize'] = document.querySelector('#parbrize');
-        me.carSetsButtons['img'] = document.querySelector('#img');
     }
-    Set_staticCarInfo(me){       
+    set_staticCarInfo(me){       
         me.staticCarInfo['brand'] = document.querySelector('.brand');
         me.staticCarInfo['model'] = document.querySelector('.model');
         me.staticCarInfo['age'] = document.querySelector('.age');
@@ -80,26 +87,32 @@ class Manager{
         me.staticCarInfo['tractiunea'] = document.querySelector('.tractiunea');
         me.staticCarInfo['carcorp'] = document.querySelector('.carcorp');
         me.staticCarInfo['pretdefoult'] = document.querySelector('.pretdefoult');
+        me.staticCarInfo['carimg'] = document.querySelector('.carimg');
     }
     
-    Set_comandButtonListener(me){
+    set_comandButtonListener(me,carObject){
         document.body.addEventListener("click", function(e){
-            if(e.target.classList.contains('comand'))
-                me.panels['panel'].style.display = 'block';		
+            if(e.target.classList.contains('comand')){
+                //console.log(me.carSetsButtons);
+                carObject.setCarPanelInfo(me.staticCarInfo, me.carSetsButtons,  me.comfortButtons, me.securityButtons, e.target.id);//
+                me.panels['panel'].style.display = 'block';	
+            }
+
+                	
         });
     }
-    Set_closeComandButtonListener(me){
+    
+    set_closeComandButtonListener(me){
         me.comandButtons['btnclose'].addEventListener("click", function(){
             me.panels['panel'].style.display = 'none';
         });
     }
-    Set_brandListener(me,jsonM,selectB,selectM){
+    set_brandListener(me,jsonM,selectB,selectM){
         selectB.onchange = function(){
-            me.Set_domSelectBrandsorModels(selectM,jsonM[selectB.value])
+            me.set_domSelectBrandsorModels(selectM,jsonM[selectB.value])
         }
     }
-
-    Set_domSelectBrandsorModels(select,jsonArray){
+    set_domSelectBrandsorModels(select,jsonArray){
         select.innerHTML = "";
         //console.log(jsonArray);
         for(let i = 0; i < jsonArray.length; i++){
@@ -110,7 +123,7 @@ class Manager{
         }
     }
     
-    createelement(tag,texthtml,clas,src,id){
+    createElement(tag,texthtml,clas,src,id){
         let domElement = document.createElement(tag);
         if(texthtml != '')
             domElement.innerHTML = texthtml;
@@ -120,28 +133,26 @@ class Manager{
                     domElement.classList.add(clas[i]);
             else
                 domElement.classList.add(clas);         
-        if(src != ''){
-            console.log(src)
-            domElement.src = src;
-        }
-           
+        if(src != '')
+            domElement.src = src;   
         if(id != '')
             domElement.id = id;
+        //console.log(tag + " : " + id);
         return domElement;
     }
 
     creatNewsBlock(me,carinfo,carkey){
-        let domElement = me.createelement("div",'','new','','')
-        domElement.appendChild(me.createelement("img",'',"carsimg", carinfo.img,''));
+        let domElement = me.createElement("div",'','new','','')
+        domElement.appendChild(me.createElement("img",'',"carsimg", carinfo.img,''));
         let text = carinfo.brand + ' ' + carinfo.model;
-        domElement.appendChild(me.createelement("h2",text,'','',''));
+        domElement.appendChild(me.createElement("h2",text,'','',''));
         text = "Age: " + carinfo.anproductie;
-        domElement.appendChild(me.createelement("p",text,'','',''));
+        domElement.appendChild(me.createElement("p",text,'','',''));
         text = "Motor Capacity: " + carinfo.capacitateamotor;
-        domElement.appendChild(me.createelement("p",text,'','',''));
-        text = "Price: " + carinfo.pretdefoult;
-        domElement.appendChild(me.createelement("p",text,'','',''));
-        domElement.appendChild(me.createelement("button",'Comand',["btn","btn-primary","comand"],'',carkey));
+        domElement.appendChild(me.createElement("p",text,'','',''));
+        text = "Price: $" + carinfo.pretdefolt;
+        domElement.appendChild(me.createElement("p",text,'','',''));
+        domElement.appendChild(me.createElement("button",'Comand',["btn","btn-primary","comand"],'',carkey+1));
         me.panels['news'].appendChild(domElement);
     }
 
@@ -156,20 +167,23 @@ class Manager{
                 me.creatNewsBlock(me,cars[i],i);
         }
     }
-    Set_cautaButtonListener(me,json){
+    set_cautaButtonListener(me,json){
         me.searchMeniu['cauta'].onclick = function(){
-            let brandvalue = me.searchMeniu['brand'].value;
-            let modelvalue = me.searchMeniu['model'].value;
-            let radioMotor = null; 
-            let radioCutie = null;
-            let radioTractiune = null;
-            if(document.querySelector(me.searchMeniu['typeMotor']))
-                radioMotor = document.querySelector(me.searchMeniu['typeMotor'].value);
-            if(document.querySelector(me.searchMeniu['gearBox']))
-                radioCutie = document.querySelector(me.searchMeniu['gearBox'].value);
-            if(document.querySelector(me.searchMeniu['wheelDrive']))
-                radioTractiune = document.querySelector(me.searchMeniu['wheelDrive'].value);
-            me.DrowListNews(me, json.cars, brandvalue, modelvalue, radioMotor, radioCutie, radioTractiune);
+            actionClickSearchMeniu(me,json)
         }
     }
+   actionClickSearchMeniu(me,json){
+        let brandvalue = me.searchMeniu['brand'].value;
+        let modelvalue = me.searchMeniu['model'].value;
+        let radioMotor = null; 
+        let radioCutie = null;
+        let radioTractiune = null;
+        if(document.querySelector(me.searchMeniu['typeMotor']))
+            radioMotor = document.querySelector(me.searchMeniu['typeMotor'].value);
+        if(document.querySelector(me.searchMeniu['gearBox']))
+            radioCutie = document.querySelector(me.searchMeniu['gearBox'].value);
+        if(document.querySelector(me.searchMeniu['wheelDrive']))
+            radioTractiune = document.querySelector(me.searchMeniu['wheelDrive'].value);
+        me.DrowListNews(me, json.cars, brandvalue, modelvalue, radioMotor, radioCutie, radioTractiune);
+   }
 }

@@ -1,104 +1,75 @@
 class Cars{
-    //comand buttons
-    constructor(json){
-        
+    constructor(json){       
         this.json = json;
         this.me = this;
-        //this.setbrand(this.json,this.brand);
-        //this.setmodel(this.json,this.model,this.brand.value)
-        //this.listeners(this);
+        
     }
-
-    // listeners(me){
-    //     news.addEventListener("click", function(e){
-    //         if(e.target.classList.contains('comand'))
-    //             me.comandpanel.style.display = 'block';		
-    //     });
-    //     me.closecomand.addEventListener("click", function(){
-    //             me.comandpanel.style.display = 'none';
-    //         });
-    //     me.brand.onchange = function(){
-    //         me.setmodel(me.json,me.model,me.brand.value)
-    //     }
-    //     me.cauta.onclick = function(){
-    //         //console.log(brand.value);
-    //         //console.log(model.value);
-    //         let tm = "";
-    //         let tc = "";
-    //         let tr = "";
-    //         if(document.querySelector(me.tmotor))
-    //             tm = document.querySelector(me.tmotor).value
-    //         if(document.querySelector(me.tcutie))
-    //             tc = document.querySelector(me.tcutie).value
-    //         if(document.querySelector(me.tract))
-    //             tr = document.querySelector(me.tract).value
-    //             me.newslist(me.json, me.brand.value, me.model.value, tm, tc, tr, me.news);
-    //     }
-    //     //me.cauta.click();
-    // }
-
-    
-    // setbrand(json,obj){
-    //     obj.innerHTML = "";
-    //     for(let i = 0; i < json.brands.length; i++){
-    //         let option = document.createElement('option');
-    //         option.innerHTML = json.brands[i];
-    //         option.value = json.brands[i];
-    //         obj.appendChild(option);
-    //     }
-    // }
-
-    // setmodel(json, obj, objval){
-    //     obj.innerHTML = "";
-    //     for(let i = 0; i < json.models[objval].length; i++){
-    //         let option = document.createElement('option');
-    //         option.innerHTML = json.models[objval][i];
-    //         option.value = json.models[objval][i];
-    //         obj.appendChild(option);
-    //     }
-    // }
-
-    newslist(js,br,md,tm,tc,tt,obj){
-        obj.innerHTML = "";
-        for(let i = 0; i < js.cars.length; i++){		
-            let car = js.cars[i];
-            if( car.brand == br &&
-                car.model == md &&
-                (car.tipmotor == tm || tm == "") &&
-                (car.tipcutie == tc || tc == "")&&
-                (car.tiptract == tt || tt == "")){
-                    let carbloc = document.createElement('div');
-                    carbloc.classList.add("new");
-    
-                    let carimg = document.createElement('img');
-                    carimg.classList.add("carsimg");
-                    carimg.src = car.img;
-                    carbloc.appendChild(carimg);
-    
-                    let carh2 = document.createElement('h2');
-                    carh2.innerHTML = br + " " + md;
-                    carbloc.appendChild(carh2);
-    
-                    let carp = document.createElement('p');
-                    carp.innerHTML = "Age: " + car.anproductie;
-                    carbloc.appendChild(carp);
-    
-                    carp = document.createElement('p');
-                    carp.innerHTML = "Motor Capacity: " + car.capacitateamotor;
-                    carbloc.appendChild(carp);
-    
-                    carp = document.createElement('p');
-                    carp.innerHTML = "Price: " + car.pretdefolt;
-                    carbloc.appendChild(carp);
-    
-                    let carbtn = document.createElement('button');
-                    carbtn.classList.add("btn","btn-primary","comand");
-                    carbtn.innerHTML = "Comand";
-                    carbtn.id = i;
-                    carbloc.appendChild(carbtn);
-    
-                    obj.appendChild(carbloc);
-                }
+    setCarPanelInfo(staticInfo, variableInfo, comfortBtns, securityBtns, carkey){//
+        //console.log(variableInfo);
+        this.setCarStaticInfo(staticInfo, this.json.cars[carkey-1]);
+        this.setCarVariableInfo(variableInfo, this.json.cars[carkey-1]);
+        this.setCarComfort(comfortBtns, this.json.cars[carkey-1]);
+            // me.setCarSecurity(staticInfo, this.json.cars[carkey-1]);
+        }
+    setCarStaticInfo(staticinfo, car){
+        //console.log(staticinfo['tractiunea']);
+        staticinfo['brand'].innerHTML = car.brand;
+        staticinfo['model'].innerHTML = car.model;
+        staticinfo['age'].innerHTML = car.anproductie;
+        staticinfo['motorcapacity'].innerHTML = car.capacitateamotor;
+        staticinfo['motorputere'].innerHTML = car.puteremotor;
+        staticinfo['motortoplivo'].innerHTML = car.tipmotor;
+        staticinfo['motorcutie'].innerHTML = car.tipcutie;
+        staticinfo['tractiunea'].innerHTML = car.tiptract;
+        staticinfo['carcorp'].innerHTML = car.tipcorp;
+        staticinfo['pretdefoult'].innerHTML = car.pretdefolt;
+        staticinfo['pretdefoult'].src = car.img;
+    }
+    setCarVariableInfo(varinfo, car){
+        //console.log(varinfo);
+        this.creatSelectInfo(varinfo['color'], car.color);
+        this.creatSelectInfo(varinfo['colorin'], car.colorsalon);
+        this.creatSelectInfo(varinfo['discuri'], car.disck);
+        this.creatSelectInfo(varinfo['audio'], car.audio);
+        this.creatSelectInfo(varinfo['aer'], car.aer);
+        this.creatSelectInfo(varinfo['parbrize'], car.parbrize);
+    }
+    setCarComfort(securityBtns,car){
+        for(let i = 0; i < car.comfort.length; i++){
+            securityBtns[i].value = car.comfort[i].price;
+            switch (car.comfort[i].proprety){
+                case "0":
+                    securityBtns[i].removeAttribute('disabled', true);
+                    securityBtns[i].removeAttribute('checked', true);
+                    //securityBtns[i].classList.add("disabled"); 
+                    securityBtns[i].classList.remove("disabled"); 
+                break;
+                case "1":
+                    securityBtns[i].setAttribute('disabled', true);
+                    securityBtns[i].setAttribute('checked', true);
+                    securityBtns[i].classList.add("disabled"); 
+                break;
+                case "2":
+                    securityBtns[i].setAttribute('disabled', true);
+                    securityBtns[i].removeAttribute('checked', true);
+                    securityBtns[i].classList.add("disabled"); 
+                break;
+            }
         }
     }
+    setCarSecurity(me,car){
+
+    }
+    creatSelectInfo(obj, arraysets){
+        console.log(arraysets.length);
+        obj.innerHTML = "";
+        for(let i = 0; i < arraysets.length; i++){
+            let option = document.createElement('option');
+            let textprice = (arraysets[i].price != 0)? " $" +arraysets[i].price : ""; 
+            option.innerHTML = arraysets[i].text +  textprice;
+            option.value = arraysets[i].price;
+            obj.appendChild(option);
+        }
+    }
+
 }

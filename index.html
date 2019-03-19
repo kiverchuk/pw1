@@ -5,8 +5,8 @@
 	<title>Chiverciuc Anton Proect Web I</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-	<script type="text/javascript" src="js/Manager.js"></script>
 	<script type="text/javascript" src="js/Cars.js"></script>
+	<script type="text/javascript" src="js/Manager.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -172,7 +172,7 @@
    <footer>&copy; Chiverciuc Anton</footer>
    <div class="absolute">
    	<button class="btn btn-secondary btnclose">X</button>
-   		<img src="img/car1.jpg" class="carsimg sizeimg">
+   		<img src="img/car1.jpg" class="carsimg sizeimg carimg">
    		<h2><span class="brand">Lamborgini</span>
    			<span class="model">Aventodor</span></h2>
    		<table>
@@ -224,7 +224,7 @@
    								<span class="defoltoptions">Tractiunea: </span>
    							</td>
    							<td>
-   								<span class="tractienea">Spate</span>
+   								<span class="tractiunea">Spate</span>
    							</td>
    						</tr>
    						<tr>
@@ -232,7 +232,7 @@
    								<span class="defoltoptions">Tip corp: </span>
    							</td>
    							<td>
-   								$<span class="carcorp">Coupe</span>
+   								<span class="carcorp">Coupe</span>
    							</td>
    						</tr>
    						<tr>
@@ -256,7 +256,7 @@
 					<div class="defoltoptions">Culoarea: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="color">
 						<option value="0">black</option>
 						<option value="0">white</option>
 						<option value="100">grey $100</option>
@@ -270,7 +270,7 @@
 					<div class="defoltoptions">Culoarea salon: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="colorin">
 						<option value="0">black</option>
 						<option value="0">white</option>
 						<option value="100">grey $100</option>
@@ -284,7 +284,7 @@
 					<div class="defoltoptions">Discuri: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="discuri">
 						<option value="0">15</option>
 						<option value="10">16 $10</option>
 						<option value="100">17 $50</option>
@@ -297,7 +297,7 @@
 					<div class="defoltoptions">Sistem audio: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="audio">
 						<option value="0">2 boxe</option>
 						<option value="10">4 boxe $100</option>
 						<option value="100">6 boxe $500</option>
@@ -309,7 +309,7 @@
 					<div class="defoltoptions">sistem contitionare: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="aer">
 						<option value="0">fara</option>
 						<option value="10">conditioner $50</option>
 						<option value="100">climat control $50</option>
@@ -322,7 +322,7 @@
 					<div class="defoltoptions">Deschiderea parbrizelor: </div>
 				</td>
 				<td>
-					<select class="form-control">
+					<select class="form-control" id="parbrize">
 						<option value="0">Manuala</option>
 						<option value="10">Automat 2 $50</option>
 						<option value="100">Automat 4 $150</option>
@@ -341,59 +341,59 @@
 				<ul class="list-group list-group-flush">                   
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort1">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Led luminatia in salon
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort2">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Scaune cu incalzire
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort3">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Oglinzi laterale cu incalzire
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort4">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Scaune cu electro regulare
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort5">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Piele interior
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort6">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Sistem de navigare
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort7">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						Controlu vitezii de cruiza
 					</li>
 					<li class="list-group-item">
 						<label class="switch">
-							<input type="checkbox" class="primary" id="lkjh">
+							<input type="checkbox" class="primary" id="comfort8">
 							<span class="slider"></span>
 						</label>
-						Bootstrap Switch Primary
+						liuk
 					</li>                  
 				</ul>
 			</div>
@@ -404,59 +404,59 @@
 					<ul class="list-group list-group-flush">                   
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure1">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							ABS
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure2">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Sensor ploaie
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure3">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Sensor parcare
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure4">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Airbag-uri
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure5">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Anvelope de iarna
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure6">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Faruri xenon
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure7">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Controlu tractiunii
 						</li>
 						<li class="list-group-item">
 							<label class="switch">
-								<input type="checkbox" class="primary" id="lkjh">
+								<input type="checkbox" class="primary" id="secure8">
 								<span class="slider"></span>
 							</label>
-							Bootstrap Switch Primary
+							Sistemu de stabilizare
 						</li>                  
 					</ul>
 				</div>
