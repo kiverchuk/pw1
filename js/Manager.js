@@ -1,5 +1,5 @@
 class Manager{
-    constructor(carObject){
+    constructor(carObject, coshObject){
         this.comandButtons = [];
         this.panels = [];
         this.searchMeniu = [];
@@ -9,112 +9,121 @@ class Manager{
         this.staticCarInfo = [];
         this.me = this;
         this.carObject = carObject;
+        this.coshObject = coshObject;
     }
 
-    setOllDomConections(me){
-        me.set_comandButtons(me);
-        me.set_panels(me);
-        me.set_searchMeniu(me);
-        me.set_comfortButtons(me);
-        me.set_securityButtons(me);
-        me.set_staticCarInfo(me);
-        me.set_carSetsButtons(me);
+    setAllDomConections(me){
+        this.setComandButtons(me);
+        this.setPanels(me);
+        this.setSearchMeniu(me);
+        this.setComfortButtons(me);
+        this.setSecurityButtons(me);
+        this.setStaticCarInfo(me);
+        this.setCarSetsButtons(me);
     }
-    setOllDomListeners(me, json, carObject){
-        me.set_comandButtonListener(me, carObject);
-        me.set_closeComandButtonListener(me);
-        me.set_brandListener(me, json.models, me.searchMeniu['brand'], me.searchMeniu['model'])
-        me.set_cautaButtonListener(me, json);
+    setAllDomListeners(me, json, carObject){
+        this.setComandButtonListener(me, carObject);
+        this.setCloseComandButtonListener(me);
+        this.setBrandListener(me, json.models, me.searchMeniu['brand'], me.searchMeniu['model'])
+        this.setCautaButtonListener(me, json);
+        this.setVariableCarInfoListeners(carObject,me);
+        this.setAdaugInCosgListener(this);
+        this.setCoshOpenlistener(me);
+        this.setCoshCloselistener(me);
     }
     setSelectBrand(me,jsonarr){
-        me.set_domSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
+        this.setDomSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
     }
     setSelectModel(me,jsonarr){
-        me.set_domSelectBrandsorModels(me.searchMeniu['model'],jsonarr[me.searchMeniu['brand'].value]);
+        this.setDomSelectBrandsorModels(me.searchMeniu['model'],jsonarr[me.searchMeniu['brand'].value]);
     }
-    // setCarPanelInfo(me,car){
-    //     me.setCarStaticInfo(me,car);
-    //     me.setCarVariableInfo(me,car);
-    //     me.setCarComfort(me,car);
-    //     me.setCarSecurity(me,car);
-    // }
 
-    set_comandButtons(me){
-        me.comandButtons['comand'] = document.querySelector('.comand');
-        me.comandButtons['btnclose'] = document.querySelector('.btnclose');
-        me.comandButtons['absolute'] = document.querySelector('.absolute');
-        me.comandButtons['coshopen'] = document.querySelector('.coshopen');
-        me.comandButtons['coshclose'] = document.querySelector('.coshclose');
-        me.comandButtons['coshnum'] = document.querySelector('.coshnum');
+
+    setComandButtons(me){
+        this.comandButtons['comand'] = document.querySelector('.comand');
+        this.comandButtons['btnclose'] = document.querySelector('.btnclose');
+        this.comandButtons['absolute'] = document.querySelector('.absolute');
+        this.comandButtons['coshopen'] = document.querySelector('.coshopen');
+        this.comandButtons['coshclose'] = document.querySelector('.coshclose');
+        this.comandButtons['coshnum'] = document.querySelector('.coshnum');
+        this.comandButtons['incosh'] = document.querySelector('.incosh');
+
     }
-    set_panels(me){
-        me.panels["news"] = document.querySelector('#news');
-        me.panels["panel"] = document.querySelector('.absolute');
-        // me.panels["coshpanel"] = document.querySelector('.coshpanel');
+    setPanels(me){
+        this.panels["news"] = document.querySelector('#news');
+        this.panels["panel"] = document.querySelector('.absolute');
+        this.panels["coshpanel"] = document.querySelector('#cosh');
     }
-    set_searchMeniu(me){
-        me.searchMeniu['brand'] = document.querySelector('#brand');
-        me.searchMeniu['model']  = document.querySelector('#model');
-        me.searchMeniu['typeMotor']  = 'input[name="gridRadiosMotor"]:checked';
-        me.searchMeniu['gearBox']  = 'input[name="gridRadiosGearbox"]:checked';
-        me.searchMeniu['wheelDrive']  = 'input[name="gridRadiosPrivod"]:checked';
-        me.searchMeniu['cauta']  = document.querySelector('#cauta');
+    setSearchMeniu(me){
+        this.searchMeniu['brand'] = document.querySelector('#brand');
+        this.searchMeniu['model']  = document.querySelector('#model');
+        this.searchMeniu['typeMotor']  = 'input[name="gridRadiosMotor"]:checked';
+        this.searchMeniu['gearBox']  = 'input[name="gridRadiosGearbox"]:checked';
+        this.searchMeniu['wheelDrive']  = 'input[name="gridRadiosPrivod"]:checked';
+        this.searchMeniu['cauta']  = document.querySelector('#cauta');
     }
-    set_comfortButtons(me){
+    setComfortButtons(me){
         for(let i = 0; i < 8; i++)
-            me.comfortButtons[i] = document.querySelector('#comfort'+(i+1));
-    }
-    set_securityButtons(me){
+            this.comfortButtons[i] = document.querySelector('#comfort'+(i+1));
+    } 
+    setSecurityButtons(me){
         for(let i = 0; i < 8; i++)
-            me.securityButtons[i] = document.querySelector('#secure'+(i+1));
+            this.securityButtons[i] = document.querySelector('#secure'+(i+1));
     }
-    set_carSetsButtons(me){
-        me.carSetsButtons['color'] = document.querySelector('#color');
-        me.carSetsButtons['colorin'] = document.querySelector('#colorin');
-        me.carSetsButtons['discuri'] = document.querySelector('#discuri');
-        me.carSetsButtons['audio'] = document.querySelector('#audio');
-        me.carSetsButtons['aer'] = document.querySelector('#aer');
-        me.carSetsButtons['parbrize'] = document.querySelector('#parbrize');
+    setCarSetsButtons(me){
+        this.carSetsButtons['color'] = document.querySelector('#color');
+        this.carSetsButtons['colorin'] = document.querySelector('#colorin');
+        this.carSetsButtons['discuri'] = document.querySelector('#discuri');
+        this.carSetsButtons['audio'] = document.querySelector('#audio');
+        this.carSetsButtons['aer'] = document.querySelector('#aer');
+        this.carSetsButtons['parbrize'] = document.querySelector('#parbrize');
     }
-    set_staticCarInfo(me){       
-        me.staticCarInfo['brand'] = document.querySelector('.brand');
-        me.staticCarInfo['model'] = document.querySelector('.model');
-        me.staticCarInfo['age'] = document.querySelector('.age');
-        me.staticCarInfo['motorcapacity'] = document.querySelector('.motorcapacity');
-        me.staticCarInfo['motorputere'] = document.querySelector('.motorputere');
-        me.staticCarInfo['motortoplivo'] = document.querySelector('.motortoplivo');
-        me.staticCarInfo['motorcutie'] = document.querySelector('.motorcutie');
-        me.staticCarInfo['tractiunea'] = document.querySelector('.tractiunea');
-        me.staticCarInfo['carcorp'] = document.querySelector('.carcorp');
-        me.staticCarInfo['pretdefoult'] = document.querySelector('.pretdefoult');
-        me.staticCarInfo['carimg'] = document.querySelector('.carimg');
+    setStaticCarInfo(me){       
+        this.staticCarInfo['brand'] = document.querySelector('.brand');
+        this.staticCarInfo['model'] = document.querySelector('.model');
+        this.staticCarInfo['age'] = document.querySelector('.age');
+        this.staticCarInfo['motorcapacity'] = document.querySelector('.motorcapacity');
+        this.staticCarInfo['motorputere'] = document.querySelector('.motorputere');
+        this.staticCarInfo['motortoplivo'] = document.querySelector('.motortoplivo');
+        this.staticCarInfo['motorcutie'] = document.querySelector('.motorcutie');
+        this.staticCarInfo['tractiunea'] = document.querySelector('.tractiunea');
+        this.staticCarInfo['carcorp'] = document.querySelector('.carcorp');
+        this.staticCarInfo['pretdefoult'] = document.querySelector('.pretdefoult');
+        this.staticCarInfo['carimg'] = document.querySelector('.carimg');
     }
     
-    set_comandButtonListener(me,carObject){
+    setComandButtonListener(me,carObject){
         document.body.addEventListener("click", function(e){
             if(e.target.classList.contains('comand')){
-                //console.log(me.carSetsButtons);
                 carObject.setCarPanelInfo(me.staticCarInfo, me.carSetsButtons,  me.comfortButtons, me.securityButtons, e.target.id);//
                 me.panels['panel'].style.display = 'block';	
-            }
-
-                	
+            }     	
         });
     }
     
-    set_closeComandButtonListener(me){
-        me.comandButtons['btnclose'].addEventListener("click", function(){
+    setCloseComandButtonListener(me){
+        this.comandButtons['btnclose'].addEventListener("click", function(){
             me.panels['panel'].style.display = 'none';
         });
     }
-    set_brandListener(me,jsonM,selectB,selectM){
+    setBrandListener(me,jsonM,selectB,selectM){
         selectB.onchange = function(){
-            me.set_domSelectBrandsorModels(selectM,jsonM[selectB.value])
+            me.setDomSelectBrandsorModels(selectM,jsonM[selectB.value])
         }
     }
-    set_domSelectBrandsorModels(select,jsonArray){
+    setCoshOpenlistener(me){
+        this.comandButtons['coshopen'].onclick = function(){
+            me.coshObject.drowData();
+            me.panels['coshpanel'].style.display = 'block';
+        }
+    }
+    setCoshCloselistener(me){
+        this.comandButtons['coshclose'].onclick = function(){
+            me.panels['coshpanel'].style.display = 'none';
+        }
+    }
+    setDomSelectBrandsorModels(select,jsonArray){
         select.innerHTML = "";
-        //console.log(jsonArray);
         for(let i = 0; i < jsonArray.length; i++){
             let option = document.createElement('option');
             option.innerHTML = jsonArray[i];
@@ -137,7 +146,6 @@ class Manager{
             domElement.src = src;   
         if(id != '')
             domElement.id = id;
-        //console.log(tag + " : " + id);
         return domElement;
     }
 
@@ -157,7 +165,7 @@ class Manager{
     }
 
     DrowListNews(me,cars,brandValue,modelValue,radioMotor,radioCutie,radioTractiune){
-        me.panels['news'].innerHTML = '';
+        this.panels['news'].innerHTML = '';
         for(let i = 0; i< cars.length; i++){
             if(cars[i].brand == brandValue &&
                 cars[i].model == modelValue &&
@@ -167,9 +175,14 @@ class Manager{
                 me.creatNewsBlock(me,cars[i],i);
         }
     }
-    set_cautaButtonListener(me,json){
-        me.searchMeniu['cauta'].onclick = function(){
-            actionClickSearchMeniu(me,json)
+    setCautaButtonListener(me,json){
+        this.searchMeniu['cauta'].onclick = function(){
+            me.actionClickSearchMeniu(me,json)
+        }
+    }
+    setAdaugInCosgListener(me){
+        this.comandButtons['incosh'].onclick = function(){
+           me.coshObject.saveNewName();
         }
     }
    actionClickSearchMeniu(me,json){
@@ -184,6 +197,40 @@ class Manager{
             radioCutie = document.querySelector(me.searchMeniu['gearBox'].value);
         if(document.querySelector(me.searchMeniu['wheelDrive']))
             radioTractiune = document.querySelector(me.searchMeniu['wheelDrive'].value);
-        me.DrowListNews(me, json.cars, brandvalue, modelvalue, radioMotor, radioCutie, radioTractiune);
+        this.DrowListNews(me, json.cars, brandvalue, modelvalue, radioMotor, radioCutie, radioTractiune);
    }
+   sendDomElementsToCarobject(carObject){
+        carObject.calculateTotalPrice( this.carSetsButtons, this.comfortButtons,  this.securityButtons)
+   }
+   setVariableCarInfoListeners(carObject, me){
+        this.carSetsButtons['color'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.carSetsButtons['colorin'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.carSetsButtons['discuri'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.carSetsButtons['audio'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.carSetsButtons['aer'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.carSetsButtons['parbrize'].onchange = function(){
+            me.sendDomElementsToCarobject(carObject);
+        }
+        this.comfortButtons.forEach(element => {
+            element.onchange = function(){
+                me.sendDomElementsToCarobject(carObject);
+            }
+        });
+        this.securityButtons.forEach(element => {
+            element.onchange = function(){
+                me.sendDomElementsToCarobject(carObject);
+            }
+        });
+   }
+   
 }

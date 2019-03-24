@@ -2,14 +2,15 @@ class Cars{
     constructor(json){       
         this.json = json;
         this.me = this;
-        
+        this.curentPrice = 0;
+        this.defoultPrice = 0;
     }
     setCarPanelInfo(staticInfo, variableInfo, comfortBtns, securityBtns, carkey){//
         //console.log(variableInfo);
         this.setCarStaticInfo(staticInfo, this.json.cars[carkey-1]);
         this.setCarVariableInfo(variableInfo, this.json.cars[carkey-1]);
         this.setCarComfort(comfortBtns, this.json.cars[carkey-1]);
-            // me.setCarSecurity(staticInfo, this.json.cars[carkey-1]);
+        this.setCarSecurity(securityBtns, this.json.cars[carkey-1]);
         }
     setCarStaticInfo(staticinfo, car){
         //console.log(staticinfo['tractiunea']);
@@ -23,7 +24,9 @@ class Cars{
         staticinfo['tractiunea'].innerHTML = car.tiptract;
         staticinfo['carcorp'].innerHTML = car.tipcorp;
         staticinfo['pretdefoult'].innerHTML = car.pretdefolt;
+        this.defoultPrice = this.curentPrice = parseInt(car.pretdefolt);
         staticinfo['pretdefoult'].src = car.img;
+        this.setTotalCarPrice();
     }
     setCarVariableInfo(varinfo, car){
         //console.log(varinfo);
@@ -35,33 +38,36 @@ class Cars{
         this.creatSelectInfo(varinfo['parbrize'], car.parbrize);
     }
     setCarComfort(securityBtns,car){
+        this.setDataButtons(securityBtns, car)
+    }
+    setCarSecurity(comfortBtns,car){
+        this.setDataButtons(comfortBtns, car)
+    }
+    setDataButtons(btns, car){
         for(let i = 0; i < car.comfort.length; i++){
-            securityBtns[i].value = car.comfort[i].price;
+            btns[i].value = car.comfort[i].price;
             switch (car.comfort[i].proprety){
                 case "0":
-                    securityBtns[i].removeAttribute('disabled', true);
-                    securityBtns[i].removeAttribute('checked', true);
+                    btns[i].removeAttribute('disabled', true);
+                    btns[i].removeAttribute('checked', true);
                     //securityBtns[i].classList.add("disabled"); 
-                    securityBtns[i].classList.remove("disabled"); 
+                    btns[i].classList.remove("disabled"); 
                 break;
                 case "1":
-                    securityBtns[i].setAttribute('disabled', true);
-                    securityBtns[i].setAttribute('checked', true);
-                    securityBtns[i].classList.add("disabled"); 
+                    btns[i].setAttribute('disabled', true);
+                    btns[i].setAttribute('checked', true);
+                    btns[i].classList.add("disabled"); 
                 break;
                 case "2":
-                    securityBtns[i].setAttribute('disabled', true);
-                    securityBtns[i].removeAttribute('checked', true);
-                    securityBtns[i].classList.add("disabled"); 
+                    btns[i].setAttribute('disabled', true);
+                    btns[i].removeAttribute('checked', true);
+                    btns[i].classList.add("disabled"); 
                 break;
             }
         }
     }
-    setCarSecurity(me,car){
-
-    }
     creatSelectInfo(obj, arraysets){
-        console.log(arraysets.length);
+        //console.log(arraysets.length);
         obj.innerHTML = "";
         for(let i = 0; i < arraysets.length; i++){
             let option = document.createElement('option');
@@ -71,5 +77,31 @@ class Cars{
             obj.appendChild(option);
         }
     }
+    calculateTotalPrice(variablDom, comfortDom, securityDom){
+        let price = this.defoultPrice;
+        
+        price += parseInt(variablDom['color'].value);
+        price += parseInt(variablDom['colorin'].value);
+        price += parseInt(variablDom['discuri'].value);
+        price += parseInt(variablDom['audio'].value);
+        price += parseInt(variablDom['aer'].value);
+        price += parseInt(variablDom['parbrize'].value);
+        comfortDom.forEach(element => {
+            if(!element.classList.contains("disabled"))
+                if(element.checked)
+                    price += parseInt(element.value);
+        });
+        securityDom.forEach(element => {
+            if(!element.classList.contains("disabled"))
+                if(element.checked)
+                    price += parseInt(element.value);
+        });
+        this.curentPrice = price;
+        this.setTotalCarPrice()
+    }
+    setTotalCarPrice(){
+        document.querySelector(".finalprice").innerHTML = this.curentPrice;
+    }
+    
 
 }

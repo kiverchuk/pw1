@@ -7,13 +7,14 @@
 	<link href="css/index.css" rel="stylesheet">
 	<script type="text/javascript" src="js/Cars.js"></script>
 	<script type="text/javascript" src="js/Manager.js"></script>
+	<script type="text/javascript" src="js/Cosh.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 <div id="container">
    <header>
    		<img src="img/logo.png" class="logopng">
-   		<button type="button" class="btn btn-primary cosh">Cosh <span class="coshnum">0</span></button>
+   		<button type="button" class="btn btn-primary coshopen">Cosh: <span class="coshnum"></span></button>
    </header>
    <aside>
     <nav>
@@ -464,6 +465,30 @@
 		</div>
 		<h1>$ <span class="finalprice">100000</span></h1>			
 		<button class="btn btn-primary incosh">Adauga in cosh</button>
+	</div>
+	<div id="cosh" class="absolute2">
+			<button class="btn btn-secondary coshclose">X</button>
+			<form onsubmit="return false">
+					<h6>Date de contact:</h6>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label for="validationDefault01">Nume</label>
+							<input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="validationDefault02" >Prenume</label>
+							<input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
+						</div>
+						<div class="col-md-4 mb-4">
+								<label for="inputEmail3">Telefon (+373)</label>
+								<input id="phonenum" class="form-control" type="tel" pattern="^\d{8}" id="inputEmail3" required data-placement="top" placeholder="77733888"  title="(+373) 12345678">
+								
+						</div>
+					</div>
+					<center><button class="btn btn-primary saveperson" >Save</button></center><hr>
+				</form>
+				<div class="orderlist"><center>Coshul este gol</center></div>
+			<button class="btn btn-primary cumpara">Cumpara</button>
 	</div>
 </body>
 </html>

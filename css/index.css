@@ -1,4 +1,4 @@
-.absolute{
+.absolute, .absolute2{
 	width: 705px;
     min-height: 500px;
     background: wheat;
@@ -25,7 +25,7 @@
 .custom-select, button{
 	font: 8pt Arial, Helvetica, sans-serif !important;
 }
-.cosh{
+.coshopen{
 	float: right;
 	padding: 5px;
     /*margin-top: -5px;	*/
@@ -85,7 +85,7 @@
 .chouserwo{
 	width: 100%;
 }
-.btnclose{
+.btnclose, .coshclose{
 	position: absolute;
     right: 1px;
     top: 1px;
