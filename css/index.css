@@ -1,18 +1,36 @@
 .absolute, .absolute2{
 	width: 705px;
-    min-height: 500px;
-    background: wheat;
-    position: absolute;
-	top: calc(50vh - (500px / 2));
-    left: calc(50vw - (700px / 2)); 
-    padding: 15px;
-    margin-bottom: 75px;
-    display:none;
+  min-height: 500px;
+  background: wheat;
+  position: absolute;
+  top: calc(50vh - (500px / 2));
+  left: calc(50vw - (700px / 2)); 
+  padding: 15px;
+  margin-bottom: 75px;
+  display:none;
+}
+.hclas{
+  border-bottom: 1px dotted black;
+}
+.absolute2{
+  width: 370px;
+  left: calc(50vw - (370px / 2));
 }
 .defoltoptions{
 	margin: 2px;
 }
+.margin{
+  margin: 10px;
+}
+.float{
+  float: right;
+  cursor: pointer;
+}
+.floatmargin{
+  float: right;
+  margin-right: 20px;
 
+}
 .disabled + .slider{
   cursor: default;
 }

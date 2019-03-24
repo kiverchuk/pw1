@@ -7,6 +7,7 @@ class Manager{
         this.securityButtons = [];
         this.carSetsButtons = [];
         this.staticCarInfo = [];
+        this.personInput = [];
         this.me = this;
         this.carObject = carObject;
         this.coshObject = coshObject;
@@ -20,6 +21,8 @@ class Manager{
         this.setSecurityButtons(me);
         this.setStaticCarInfo(me);
         this.setCarSetsButtons(me);
+        this.setPersonInput(me);
+        this.coshObject.personInput = this.personInput;
     }
     setAllDomListeners(me, json, carObject){
         this.setComandButtonListener(me, carObject);
@@ -30,6 +33,8 @@ class Manager{
         this.setAdaugInCosgListener(this);
         this.setCoshOpenlistener(me);
         this.setCoshCloselistener(me);
+        this.setSavePersonData(me);
+        this.setDeletFromOrderList(me);
     }
     setSelectBrand(me,jsonarr){
         this.setDomSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
@@ -47,7 +52,7 @@ class Manager{
         this.comandButtons['coshclose'] = document.querySelector('.coshclose');
         this.comandButtons['coshnum'] = document.querySelector('.coshnum');
         this.comandButtons['incosh'] = document.querySelector('.incosh');
-
+        this.comandButtons['saveperson'] = document.querySelector('.saveperson');
     }
     setPanels(me){
         this.panels["news"] = document.querySelector('#news');
@@ -91,6 +96,11 @@ class Manager{
         this.staticCarInfo['pretdefoult'] = document.querySelector('.pretdefoult');
         this.staticCarInfo['carimg'] = document.querySelector('.carimg');
     }
+    setPersonInput(me){       
+        this.personInput['nume'] = document.querySelector('.nume');
+        this.personInput['prenume'] = document.querySelector('.prenume');
+        this.personInput['telefon'] = document.querySelector('.telefon');       
+    }
     
     setComandButtonListener(me,carObject){
         document.body.addEventListener("click", function(e){
@@ -121,6 +131,21 @@ class Manager{
         this.comandButtons['coshclose'].onclick = function(){
             me.panels['coshpanel'].style.display = 'none';
         }
+    }
+    setSavePersonData(me){
+        document.querySelector('#form').onsubmit = function(event){
+            event.preventDefault();
+			me.coshObject.savePersonData();
+			
+		}
+    }
+    setDeletFromOrderList(me){
+        document.querySelector('.orderlist').addEventListener("click", function(event){
+            if(event.target.classList.contains('float')){
+                me.coshObject.deletOrder(event.target.id);
+            }
+                
+        });
     }
     setDomSelectBrandsorModels(select,jsonArray){
         select.innerHTML = "";
@@ -182,7 +207,7 @@ class Manager{
     }
     setAdaugInCosgListener(me){
         this.comandButtons['incosh'].onclick = function(){
-           me.coshObject.saveNewName();
+           me.coshObject.addOrder(me.order());
         }
     }
    actionClickSearchMeniu(me,json){
@@ -231,6 +256,13 @@ class Manager{
                 me.sendDomElementsToCarobject(carObject);
             }
         });
+   }
+   order(){
+       let order = {};
+       order.brand = this.staticCarInfo['brand'].innerHTML;
+       order.model = this.staticCarInfo['model'].innerHTML;
+       order.price = document.querySelector(".finalprice").innerHTML;
+       return order;
    }
    
 }

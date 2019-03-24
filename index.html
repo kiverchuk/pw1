@@ -468,26 +468,27 @@
 	</div>
 	<div id="cosh" class="absolute2">
 			<button class="btn btn-secondary coshclose">X</button>
-			<form onsubmit="return false">
+			<form id="form">
 					<h6>Date de contact:</h6>
 					<div class="form-row">
 						<div class="col-md-4 mb-3">
 							<label for="validationDefault01">Nume</label>
-							<input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+							<input type="text" class="form-control nume" id="validationDefault01" placeholder="First name" value="" required>
 						</div>
 						<div class="col-md-4 mb-3">
 							<label for="validationDefault02" >Prenume</label>
-							<input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
+							<input type="text" class="form-control prenume" id="validationDefault02" placeholder="Last name" value="" required>
 						</div>
 						<div class="col-md-4 mb-4">
 								<label for="inputEmail3">Telefon (+373)</label>
-								<input id="phonenum" class="form-control" type="tel" pattern="^\d{8}" id="inputEmail3" required data-placement="top" placeholder="77733888"  title="(+373) 12345678">
+								<input id="phonenum" class="form-control telefon" type="tel" pattern="^\d{8}" id="inputEmail3" required data-placement="top" placeholder="77733888"  title="(+373) 12345678">
 								
 						</div>
 					</div>
-					<center><button class="btn btn-primary saveperson" >Save</button></center><hr>
+					<center><button class="btn btn-primary saveperson">Save</button></center><hr>
 				</form>
 				<div class="orderlist"><center>Coshul este gol</center></div>
+				<div>Total spre plata: $ <span class="totalprice">0</span></div>
 			<button class="btn btn-primary cumpara">Cumpara</button>
 	</div>
 </body>

@@ -13,7 +13,17 @@ window.onload = function(){
 		manager_object.actionClickSearchMeniu(manager_object.me, car_object.json);
 		cosh_object.numOrders(manager_object.comandButtons['coshnum']);
 		
+		// document.querySelector('#form').onsubmit = function(){
+		// 	cosh_object.savePersonData();
+		// 	event.preventDefault();
+		// }
+		
 	})()
+	// function submiting(){
+	// 	//cosh_object.savePersonData();
+	// 	alert("g")
+	// 	return false;
+	// }
 }
 
 // console.log(sumeaza(20,30))
