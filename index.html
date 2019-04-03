@@ -13,7 +13,7 @@
 <body>
 <div id="container">
    <header>
-   		<img src="img/logo.png" class="logopng">
+			<a href="/index.html"><img src="img/logo.png" class="logopng"></a>
    		<button type="button" class="btn btn-primary coshopen">Cosh: <span class="coshnum"></span></button>
    </header>
    <aside>
@@ -170,7 +170,7 @@
 	    <button class="btn btn-primary comand">Comand</button>
    	</div>
    </article>
-   <footer>&copy; Chiverciuc Anton</footer>
+   <footer>&copy; Chiverciuc Anton     <a href="/history.html">history</a>     <a href="/index.html">Home</a> </footer>
    <div class="absolute">
    	<button class="btn btn-secondary btnclose">X</button>
    		<img src="img/car1.jpg" class="carsimg sizeimg carimg">
@@ -468,7 +468,14 @@
 	</div>
 	<div id="cosh" class="absolute2">
 			<button class="btn btn-secondary coshclose">X</button>
-			<form id="form">
+			
+				<div class="orderlist"><center>Coshul este gol</center></div>
+				<div>Spre plata: $ <span class="totalprice">0</span></div>
+				<div>Spre plata cu cupon: $ <span class="totalpricecupon">0</span></div>
+			<button class="btn btn-primary cumpara" type="submit">Cumpara</button>
+			Cupon: <input id="cuponInput" type="text">
+			<hr>
+			<form id="form" >
 					<h6>Date de contact:</h6>
 					<div class="form-row">
 						<div class="col-md-4 mb-3">
@@ -485,11 +492,10 @@
 								
 						</div>
 					</div>
-					<center><button class="btn btn-primary saveperson">Save</button></center><hr>
+					<center>
+						<button class="btn btn-primary" type="submit" value="submit">Buy</button>
+					</center>
 				</form>
-				<div class="orderlist"><center>Coshul este gol</center></div>
-				<div>Total spre plata: $ <span class="totalprice">0</span></div>
-			<button class="btn btn-primary cumpara">Cumpara</button>
 	</div>
 </body>
 </html>

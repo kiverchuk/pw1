@@ -339,5 +339,10 @@
 
 		}
 	],
+	"cupons":[
+		{"name" : "cupon15", "discount" : 15},
+		{"name" : "cupon10", "discount" : 10},
+		{"name" : "cupon05", "discount" : 5}
+	],
 	"comment comfort/securitate proprety" : "0 - nus, 1 - sun,  3 - neasamblambele"
 }

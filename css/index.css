@@ -5,7 +5,7 @@
   position: absolute;
   top: calc(50vh - (500px / 2));
   left: calc(50vw - (700px / 2)); 
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 75px;
   display:none;
 }
@@ -18,6 +18,12 @@
 }
 .defoltoptions{
 	margin: 2px;
+}
+.history{
+  margin: 0 !important;
+}
+#form{
+  display: none;
 }
 .margin{
   margin: 10px;

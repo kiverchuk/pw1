@@ -11,8 +11,10 @@ window.onload = function(){
 		manager_object.setSelectBrand(manager_object.me, car_object.json.brands);
 		manager_object.setSelectModel(manager_object.me, car_object.json.models);
 		manager_object.actionClickSearchMeniu(manager_object.me, car_object.json);
-		cosh_object.numOrders(manager_object.comandButtons['coshnum']);
-		
+		cosh_object.coshNum = manager_object.comandButtons['coshnum'];
+		cosh_object.cuponJson = json.cupons;
+		cosh_object.cuponInput = manager_object.comandButtons['cuponinput'];
+		cosh_object.numOrders();
 		// document.querySelector('#form').onsubmit = function(){
 		// 	cosh_object.savePersonData();
 		// 	event.preventDefault();

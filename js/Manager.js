@@ -33,8 +33,11 @@ class Manager{
         this.setAdaugInCosgListener(this);
         this.setCoshOpenlistener(me);
         this.setCoshCloselistener(me);
-        this.setSavePersonData(me);
+        this.setBuyCarList(me);
         this.setDeletFromOrderList(me);
+        this.setCuponInputListener(me);
+        //this.DeletPersonData(me);
+        this.setCumparaButon(me);
     }
     setSelectBrand(me,jsonarr){
         this.setDomSelectBrandsorModels(me.searchMeniu['brand'],jsonarr);
@@ -52,7 +55,10 @@ class Manager{
         this.comandButtons['coshclose'] = document.querySelector('.coshclose');
         this.comandButtons['coshnum'] = document.querySelector('.coshnum');
         this.comandButtons['incosh'] = document.querySelector('.incosh');
-        this.comandButtons['saveperson'] = document.querySelector('.saveperson');
+        //this.comandButtons['saveperson'] = document.querySelector('.saveperson');
+        //this.comandButtons['deletperson'] = document.querySelector('.deletperson');
+        this.comandButtons['cumpara'] = document.querySelector('.cumpara');
+        this.comandButtons['cuponinput'] = document.querySelector('#cuponInput');
     }
     setPanels(me){
         this.panels["news"] = document.querySelector('#news');
@@ -124,21 +130,37 @@ class Manager{
     setCoshOpenlistener(me){
         this.comandButtons['coshopen'].onclick = function(){
             me.coshObject.drowData();
+            me.comandButtons['cuponinput'].value = '';
             me.panels['coshpanel'].style.display = 'block';
         }
     }
     setCoshCloselistener(me){
         this.comandButtons['coshclose'].onclick = function(){
             me.panels['coshpanel'].style.display = 'none';
+            document.querySelector('#form').style.display = "none";
         }
     }
-    setSavePersonData(me){
+    setBuyCarList(me){
         document.querySelector('#form').onsubmit = function(event){
             event.preventDefault();
-			me.coshObject.savePersonData();
-			
+			me.coshObject.CumparaLista();
+			//return event.target.checkValidity()
 		}
     }
+    setCumparaButon(me){
+        this.comandButtons['cumpara'].onclick = function(){
+            //me.comandButtons['saveperson'].click();
+            //console.log('cumpara cklick');
+            document.querySelector('#form').style.display = "block";
+
+        }
+    }
+    // DeletPersonData(me){
+    //     this.comandButtons['deletperson'].onclick = function(){
+    //         console.log("event deleet");
+    //         me.coshObject.deletPersonData();
+    //     }
+    // }
     setDeletFromOrderList(me){
         document.querySelector('.orderlist').addEventListener("click", function(event){
             if(event.target.classList.contains('float')){
@@ -146,6 +168,11 @@ class Manager{
             }
                 
         });
+    }
+    setCuponInputListener(me){
+        this.comandButtons['cuponinput'].onkeyup = function(){
+            me.coshObject.verifyCupon();
+        }
     }
     setDomSelectBrandsorModels(select,jsonArray){
         select.innerHTML = "";
